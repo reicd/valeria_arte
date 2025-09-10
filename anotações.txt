@@ -1,7 +1,19 @@
-Roteiro-
+Roteiro- Início
 1.Criar o projeto e app Django
 2.Habilita o app /módulo polls
 3. Criar uma view para app polls
 4. Adicionar as  rotas
 5. Inicializar um servidor de desenvolvimento para testes
 6. Criar um template em HTML
+
+Roteiro - Introdução a template
+1. Estrutura de templates para reutilização _base.HTML;
+2. Template de layout genérico _layout1.html;
+3. Aplicar o layout genérico em um template final;
+4. Arquivos estáticos (Imagem, css, JS);
+5. Usar arquivo estático: favicon.
+
+{{ }}=> imprime valores de variáveis
+    {% %}=> comandos de controle (if, for, etc)
+    {# #}=> comentários
+

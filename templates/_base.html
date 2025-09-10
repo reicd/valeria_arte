@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block head_title %}
+        Valéria.Arte
+        {% endblock head_title %}
+    </title>
+    <link rel="shortcut icon"  type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+    {% block css %}
+        
+    {% endblock css %}
+</head>
+<body>
+    {% block header %}
+    <div class="container"></div>
+    {% endblock content %}
+    {% block main %}
+        {% block content %}
+
+        {% endblock content %}
+    {% endblock main %}
+    {% block footer %}
+    {% endblock footer %}
+
+    {% block js %}
+    {% endblock js %}
+</body>
+</html>
