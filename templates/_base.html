@@ -9,14 +9,13 @@
         {% endblock head_title %}
     </title>
     <link rel="shortcut icon"  type="image/x-icon" href="{% static 'images/favicon.ico' %}">
-    {% block css %}
+    {% block css %} {# CSS do projeto #}
         
     {% endblock css %}
 </head>
 <body>
     {% block header %}
-    <div class="container"></div>
-    {% endblock content %}
+    {% endblock header %}
     {% block main %}
         {% block content %}
 
