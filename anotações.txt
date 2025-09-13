@@ -1,7 +1,7 @@
-Roteiro- Início
+Roteiro- Inícial
 1.Criar o projeto e app Django
 2.Habilita o app /módulo polls
-3. Criar uma view para app polls
+3. Criar uma view para app SAC
 4. Adicionar as  rotas
 5. Inicializar um servidor de desenvolvimento para testes
 6. Criar um template em HTML
