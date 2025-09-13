@@ -5,7 +5,7 @@ from django.http import HttpResponse
 # Definir uma view baseada em função.
 def index(request):
     # return HttpResponse("Hello, world. You're at the sac index.")
-    return render(request, 'index.html')
+    return render(request, 'index.html', {'titulo': 'Página Inicial'})
 # Definir uma view baseada em função.
 def about(request):
     return HttpResponse("This is the about page of the sac app.")
