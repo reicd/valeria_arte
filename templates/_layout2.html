@@ -1,0 +1,19 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block css %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    {# CSS do projeto #}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+{% endblock css %}
+{% block header %}
+<div class="container">
+    <header><h1>Valéria.Arte SAC</h1></header>
+</div>
+{% endblock header %}
+{% block main %}
+    <div class="container">
+        {% block content %}
+        <p>Bem-vindo à Valéria.Arte!</p>
+        {% endblock content %}
+    </div>
+{% endblock main %}

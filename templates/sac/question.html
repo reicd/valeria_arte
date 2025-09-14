@@ -1,0 +1,19 @@
+{% extends '_layout2.html' %}
+{% block head_title %}
+    Pergunta - Valéria.Arte
+{% endblock head_title %}
+
+{% block content %}
+    <h1>Pergunta</h1>
+    <p>Esta é a página de perguntas frequentes (FAQ) da Valéria.Arte.</p>
+    {% for question in all_questions %}
+        <div class="faq-item">
+                <p>{{ question.question_text }} | 
+                Publicado em: {{ question.pub_date|date:"d/m/y H:i" }}</p>
+        </div>
+        {% empty %}
+            <p>Nenhuma pergunta disponível no momento.</p>
+    {% endfor %}
+
+
+{% endblock %}

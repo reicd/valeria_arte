@@ -16,4 +16,13 @@ Roteiro - Introdução a template
 {{ }}=> imprime valores de variáveis
     {% %}=> comandos de controle (if, for, etc)
     {# #}=> comentários
+ 
+ Roteiro - Introdução aos models  
+1. Introdução ao ORM e models;
+2. Migração de dados;
+3. Reversão de model
+4. Criação de model;
+5. Criar uma pergunta de exemplo;
+6. Exibir dados em um template.
+
 
