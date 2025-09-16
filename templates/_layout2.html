@@ -14,7 +14,12 @@
     <ul class="nav nav-pills"></ul>
             {% if user.is_authenticated %}
         <li class="nav-item">
-            <a href="{% url 'logout' %}" class="nav-link px-2 link-dark">Sair</a>
+            <!-- <a href="{% url 'logout' %}" class="nav-link px-2 link-dark">Sair</a> -->
+            <form id="logout-form" method="post" action="{% url 'admin:logout' %}">
+                {% csrf_token %}
+                <button type="submit">Sair</button>
+            </form>
+            
         </li>
             {% else %}
         <li class="nav-item">

@@ -13,6 +13,7 @@ from accounts.form import AccountSignupForm
 
 # Create your views here.
 
+
 class AccountCreateView(CreateView):
     model = User
     form_class = AccountSignupForm
