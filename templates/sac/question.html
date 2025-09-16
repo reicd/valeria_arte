@@ -1,10 +1,11 @@
 {% extends '_layout2.html' %}
+{% load static %}
+
 {% block head_title %}
     Pergunta - Valéria.Arte
 {% endblock head_title %}
 
 {% block content %}
-    <h1>Pergunta</h1>
     <p>Esta é a página de perguntas frequentes (FAQ) da Valéria.Arte.</p>
     {% for question in all_questions %}
         <div class="faq-item">

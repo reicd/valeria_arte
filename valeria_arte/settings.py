@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'sac.apps.SacConfig',
+    'accounts.apps.AccountsConfig',
 ]
 
 MIDDLEWARE = [
@@ -126,4 +127,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, "public")
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
-
+LOGIN_REDIRECT_URL = '/about'
+LOGOUT_REDIRECT_URL = '/index'

@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 
 from sac.models import Question
 
@@ -9,6 +10,7 @@ def index(request):
     # return HttpResponse("Hello, world. You're at the sac index.")
     return render(request, 'index.html', {'titulo': 'Página Inicial'})
 # Definir uma view baseada em função.
+@login_required
 def about(request):
     # return HttpResponse("This is the about page of the sac app.")
     question = Question.objects.all()

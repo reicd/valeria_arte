@@ -25,4 +25,12 @@ Roteiro - Introdução a template
 5. Criar uma pergunta de exemplo;
 6. Exibir dados em um template.
 
+    Roteiro - Registro e login de usuários
+1. Definir o redirecionamento padrão, após login e logof; 
+2. Criar um novo django app para gestão de contas e usuários;
+3. Criar e personalizar um form Django para registro de usuário;
+4. Criar uma view e o template para registro de usuário;
+5. Criar rotas específicas para para gestão de contas;
+6. Controle de acesso pela sessão logado.      
+
 

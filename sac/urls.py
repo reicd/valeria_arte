@@ -6,7 +6,7 @@ from sac.views import index, about
 urlpatterns = [
     #path('rota/', view, name='nome_da_rota'),
     #Exemplo:
-    path('index/', index, name='sac-index'),
-    path('about/', about, name='sac-about'),
-   
+    path('index/', index, name='index'),
+    path('about/', about, name='about'),
+
 ]
