@@ -31,6 +31,15 @@ Roteiro - Introdução a template
 3. Criar e personalizar um form Django para registro de usuário;
 4. Criar uma view e o template para registro de usuário;
 5. Criar rotas específicas para para gestão de contas;
-6. Controle de acesso pela sessão logado.      
+6. Controle de acesso pela sessão logado. 
+
+    Roteiro: Flash mensagens
+1. Configurar as classes CSS para nessagens;
+2. Incluir o suporte padrão de mensagens na view; 
+3. Incluir a exibição das mensagens em nosso template;
+4. Testa.
+
+
+
 
 
