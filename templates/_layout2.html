@@ -13,7 +13,7 @@
     <span class="fs-4">Valéria.Arte</span></a>
      
 
-<ul class="nav" style="list-style-type: none;"></ul>
+<ul class="nav" style="list-style-type: none;">
             {% if user.is_authenticated %}
         <li class="nav-item">
 
@@ -32,7 +32,7 @@
             <a href="{% url 'signup' %}" class="nav-link">Registrar</a>
         </li>        
             {% endif %}
-    <li class="nav-item">
+        <li class="nav-item">
             <a href="{% url 'index' %}" class="nav-link">Sobre</a>
         </li>
     </ul>                  
