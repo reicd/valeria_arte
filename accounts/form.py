@@ -11,4 +11,8 @@ class AccountSignupForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ('username', 'email', 'password',)
+        fields = (
+            'username', 'email', 'data_nascimento', 'telefone', 'endereco', 'cidade', 'estado', 'pais', 'cep', 'cpf', 'password',)
+        widgets = {
+            'data_nascimento': forms.DateInput(attrs={'type': 'date', }),
+        }
