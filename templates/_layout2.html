@@ -13,14 +13,14 @@
     <span class="fs-4">Valéria.Arte</span></a>
      
 
-<ul class="nav" style="list-style-type: none;">
+<ul class="nav nav-pills" style="list-style-type: none;">
             {% if user.is_authenticated %}
         <li class="nav-item">
 
         <li class="nav-item;">{{ user.username }}</li>
-            <form action="{% url 'logout' %}" method="post">
+            <form class="d-flex" action="{% url 'logout' %}" method="post">
                     {% csrf_token %}
-                <button type="submit">Sair</button>
+                <button class="btn btn-outline-success" type="submit">Sair</button>
             </form>
             <!-- <a href="{% url 'index' %}" class="nav-link px-2 link-dark">Sair</a> -->
         </li>
