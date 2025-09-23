@@ -39,6 +39,14 @@ Roteiro - Introdução a template
 3. Incluir a exibição das mensagens em nosso template;
 4. Testa.
 
+    Roteiro: Área administrativa
+1. Criar um usuário administrativo;
+2. Acessar a área administrativa;
+3. Explorar a área administrativa;
+4. Incluir o Model Question na área administrativa;
+5. Model CustomUser na área administrativa.
+
+
 
 
 
