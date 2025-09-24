@@ -46,6 +46,16 @@ Roteiro - Introdução a template
 4. Incluir o Model Question na área administrativa;
 5. Model CustomUser na área administrativa.
 
+    Roteiro: CRUD Básico = Create
+1. Criar a classe QuestinForm;
+2. Implementar as views;
+3. Criar o templates para exibir o formulário; 
+4. Definir as rotas para a views;
+5. Controle de acesso às rotas.
+====CRUD = Create, Read, Update e Delete===
+
+
+
 
 
 

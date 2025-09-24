@@ -1,5 +1,5 @@
 from django.urls import path
-from sac.views import index, about
+from sac.views import index, about, QuestionCreateView, question_create
 
 
 #Lista de caminhos (urls) do app sac
@@ -8,5 +8,8 @@ urlpatterns = [
     #Exemplo:
     path('index/', index, name='index'),
     path('about/', about, name='about'),
+    path('enquete/add', QuestionCreateView.as_view(), name="poll_add"),
+    path('pergunta/create',question_create, name= "question_create" ),
+ 
 
 ]
