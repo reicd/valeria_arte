@@ -25,6 +25,15 @@ Roteiro - Introdução a template
 5. Criar uma pergunta de exemplo;
 6. Exibir dados em um template.
 
+    Roteiro - Registro de produto, somente usuário logado e com privilégio
+1. Definir o redirecionamento padrão, após login e logof; 
+ 2. Criar um novo django app para gestão de produtos;
+3. Criar e personalizar um form Django para registro de produto;
+4. Criar uma view e o template para registro de produtos;
+ Criar rotas específicas para para gestão de produtos cadastrados;
+5. Controle de acesso pela sessão 
+
+
     Roteiro - Registro e login de usuários
 1. Definir o redirecionamento padrão, após login e logof; 
 2. Criar um novo django app para gestão de contas e usuários;

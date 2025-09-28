@@ -22,4 +22,7 @@ urlpatterns = [
     path('', include('sac.urls')),
     path('', include('accounts.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
+    # Rota, View responsável, Nome de referência
+    
+    path('products/', include('products.urls')),
 ]

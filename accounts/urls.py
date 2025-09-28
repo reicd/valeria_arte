@@ -1,8 +1,7 @@
 from django.urls import path
-from accounts import views 
+from .views import AccountCreateView
 
 urlpatterns = [
-    path(
-        'accounts/signup/', 
-        views.AccountCreateView.as_view(), name='signup'),
+    # Rota para a página de registro de novos usuários
+    path('signup/', AccountCreateView.as_view(), name='signup'),
 ]
