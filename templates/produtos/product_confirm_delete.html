@@ -1,0 +1,18 @@
+{% extends '_layout2.html' %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h5 class="card-title">Confirmar Exclusão</h5>
+    </div>
+    <div class="card-body">
+        <p>Você tem certeza que deseja excluir o produto: <strong>"{{ object.name }}"</strong>?</p>
+        <p>Esta ação não pode ser desfeita.</p>
+        <form method="post">
+            {% csrf_token %}
+            <a href="{% url 'products-index' %}" class="btn btn-secondary">Cancelar</a>
+            <button type="submit" class="btn btn-danger">Sim, Excluir</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
