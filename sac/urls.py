@@ -8,7 +8,7 @@ urlpatterns = [
     #Exemplo:
     path('index/', index, name='index'),
     path('about/', about, name='about'),
-    path('enquete/add', QuestionCreateView.as_view(), name="poll_add"),
+    path('pergunta/add', QuestionCreateView.as_view(), name="sac_add"),
     path('pergunta/create',question_create, name= "question_create" ),
  
 
