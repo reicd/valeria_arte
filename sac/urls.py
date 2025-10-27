@@ -10,6 +10,4 @@ urlpatterns = [
     path('about/', about, name='about'),
     path('pergunta/add', QuestionCreateView.as_view(), name="sac_add"),
     path('pergunta/create',question_create, name= "question_create" ),
- 
-
-]
+ ]

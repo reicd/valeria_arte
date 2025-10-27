@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.views.generic.edit import CreateView
 from django.urls import reverse_lazy
-
+from django.contrib.auth.mixins import LoginRequiredMixin
 from sac.models import Question
 from sac.forms import QuestionForm
 
@@ -24,7 +24,7 @@ def about(request):
     context = {'all_questions': question}
     return render(request, 'sac/question.html', context)
 
-class QuestionCreateView(CreateView):
+class QuestionCreateView(LoginRequiredMixin, CreateView):
     model = Question
     template_name = 'sac/question_form.html'
     fields = ('question_text', 'pub_date')
@@ -34,14 +34,16 @@ class QuestionCreateView(CreateView):
     def form_valid(self, form):
         messages.success(self.request, self.sucess_message)
         return super(QuestionCreateView, self).form_valid(form)
-
+@login_required
 def question_create(request):
     context = {}
     form = QuestionForm(request.POST or None, request.FILES or None)
     context['form'] = form
+    
     if request.method == "POST":
         if form.is_valid():
             form.save()
             messages.success(request= 'Pergunta criada com sucesso')
             return redirect("index")
+    
     return render(request, 'sac/question_form.html', context)
