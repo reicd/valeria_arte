@@ -62,7 +62,11 @@
 3. Adicionar um link/botão para "Editar pergunta";
 4. Personalizar o título do formulário de Criação/Edição.
 
-=== 10 - 
+=== 10 - Crude Básico = desenvolvimento
+1. Implementação as views para exclusão de perguntas;
+2. Criar um template para a confirmação de exclusão; 
+3. Definir as rotas para views;
+4. Adicionar um link/botão para "Excluir Pergunta".
 ====CRUD = Create, Read, Update e Delete===
 
 

@@ -2,7 +2,7 @@ from django.forms import BaseModelForm
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from django.views.generic.edit import CreateView, UpdateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 from sac.models import Question
@@ -86,3 +86,24 @@ def question_update(request, pk):
             return redirect("about")
     
     return render(request, 'sac/question_form.html', context)
+
+class QuestionDeleteView(LoginRequiredMixin, DeleteView):
+    model = Question
+    template_name = 'sac/question_confirm_delete.html'
+    success_url = reverse_lazy('about')
+    sucess_message ='Pergunta deletada com sucesso.'
+    
+    def delete(self, request, *args, **kwargs):
+        messages.success(self.request, self.sucess_message)
+        return super(QuestionDeleteView, self).delete(request, *args, **kwargs)
+@login_required
+def question_delete(request, pk):
+    question = get_object_or_404(Question, pk=pk)
+    
+    if request.method == "POST":
+        question.delete()
+        messages.success(request, 'Pergunta deletada com sucesso')
+        return redirect("about")
+    
+    context = {'object': question}
+    return render(request, 'sac/question_confirm_delete.html', context)

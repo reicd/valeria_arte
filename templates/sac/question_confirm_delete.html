@@ -1,0 +1,23 @@
+{% extends '_layout2.html' %}
+
+{% block head_title %}
+    Confirmar Exclusão - Valéria.Arte
+{% endblock head_title %}
+
+{% block content %}
+
+    <div class="container mt-4">
+        <div class="d-flex flex-column align-items-start">
+                <h2>Confirmar Exclusão</h2>
+            <p>Você tem certeza que deseja excluir a seguinte pergunta?</p>
+            <blockquote class="blockquote">
+                <p class="mb-0">"{{ object.question_text }}"</p>
+            </blockquote>
+            <form method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">Sim, excluir</button>
+                <a href="{% url 'about' %}" class="btn btn-secondary">Cancelar</a>
+            </form>
+        </div>
+</div>
+{% endblock %}

@@ -1,6 +1,7 @@
 from django.urls import path
 from sac.views import ( index, about, QuestionCreateView, question_create,
-QuestionUpdateView, question_update, 
+QuestionUpdateView, question_update,
+QuestionDeleteView, question_delete,
 )
 
 
@@ -15,4 +16,5 @@ urlpatterns = [
     path('pergunta/create',question_create, name= "question_create" ),
     path('pergunta/<int:pk>/edit', QuestionUpdateView.as_view(), name="sac_edit"),
     path('pergunta/<int:pk>/update', question_update, name="question_update" ),
+    path('pergunta/<int:pk>/delete', question_delete, name="question_delete"),
  ]
