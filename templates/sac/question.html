@@ -6,13 +6,15 @@
 {% endblock head_title %}
 
 {% block content %}
-  <h2>Esta é a página de perguntas frequentes (SAC) da Valéria.Arte.</h2> <hr>
-  
+    <div class="container mt-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2>Esta é a página de perguntas frequentes (SAC) da Valéria.Arte.</h2> <hr>
+            <a href="{% url 'sac_add' %}" class="btn btn-success font-weight-bold">Incluir novo SAC</a> <br><br>
+        </div>
+    </div>
     {% for question in all_questions %}
-    
-    
         <div class="faq-item">
-                <p>Publicado em: {{ question.pub_date | date:"d/m/y H:i" }} | {{ question.question_text }} </p>
+                <p>Publicado em: {{ question.pub_date | date:"d/m/y H:i" }} | {{ question.question_text }} <br> <a href="{% url 'sac_edit' question.pk %}" class="btn btn-warning btn-sm">Editar</a>  <a href="{% url 'question_update' question.pk %}" class="btn btn-danger btn-sm">Excluir</a></p>
         </div>
         {% empty %}
             <p>Nenhuma pergunta disponível no momento.</p>

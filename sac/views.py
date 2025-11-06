@@ -28,7 +28,7 @@ class QuestionCreateView(LoginRequiredMixin, CreateView):
     model = Question
     template_name = 'sac/question_form.html'
     fields = ('question_text', 'pub_date')
-    success_url = reverse_lazy('index')
+    success_url = reverse_lazy('about')
     sucess_message ='Pergunta criada com sucesso.'
     
     def form_valid(self, form):
@@ -43,8 +43,8 @@ def question_create(request):
     if request.method == "POST":
         if form.is_valid():
             form.save()
-            messages.success(request= 'Pergunta criada com sucesso')
-            return redirect("index")
+            messages.success(request, 'Pergunta criada com sucesso')
+            return redirect("about")
     
     return render(request, 'sac/question_form.html', context)
 
@@ -69,7 +69,7 @@ def question_update(request, pk):
     if request.method == "POST":
         if form.is_valid():
             form.save()
-            messages.success(request= 'Pergunta atualizada com sucesso')
+            messages.success(request, 'Pergunta atualizada com sucesso')
             return redirect("index")
     
     return render(request, 'sac/question_form.html', context)
