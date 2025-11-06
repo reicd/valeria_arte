@@ -27,18 +27,25 @@ def about(request):
 class QuestionCreateView(LoginRequiredMixin, CreateView):
     model = Question
     template_name = 'sac/question_form.html'
-    fields = ('question_text', 'pub_date')
+    form_class = QuestionForm
     success_url = reverse_lazy('about')
     sucess_message ='Pergunta criada com sucesso.'
     
     def form_valid(self, form):
         messages.success(self.request, self.sucess_message)
         return super(QuestionCreateView, self).form_valid(form)
+    
+    def get_context_data(self, **kwargs):
+        context = super(QuestionCreateView, self).get_context_data(**kwargs)
+        context['form_title'] = 'Criar Pergunta'
+        return context
+
 @login_required
 def question_create(request):
     context = {}
     form = QuestionForm(request.POST or None, request.FILES or None)
     context['form'] = form
+    context['form_title'] = 'Criar Pergunta'
     
     if request.method == "POST":
         if form.is_valid():
@@ -51,13 +58,18 @@ def question_create(request):
 class QuestionUpdateView(LoginRequiredMixin, UpdateView):
     model = Question
     template_name = 'sac/question_form.html'
-    fields = ('question_text', 'pub_date')
-    success_url = reverse_lazy('index')
+    form_class = QuestionForm
+    success_url = reverse_lazy('about')
     sucess_message ='Pergunta atualizada com sucesso.'
     
     def form_valid(self, form):
         messages.success(self.request, self.sucess_message)
         return super(QuestionUpdateView, self).form_valid(form)
+
+    def get_context_data(self, **kwargs):
+        context = super(QuestionUpdateView, self).get_context_data(**kwargs)
+        context['form_title'] = 'Editando uma pergunta'
+        return context
     
 @login_required
 def question_update(request, pk):
@@ -65,11 +77,12 @@ def question_update(request, pk):
     question = get_object_or_404(Question, pk=pk)
     form = QuestionForm(request.POST or None, request.FILES or None, instance=question)
     context['form'] = form
+    context['form_title'] = 'Editando uma pergunta'
     
     if request.method == "POST":
         if form.is_valid():
             form.save()
             messages.success(request, 'Pergunta atualizada com sucesso')
-            return redirect("index")
+            return redirect("about")
     
     return render(request, 'sac/question_form.html', context)
