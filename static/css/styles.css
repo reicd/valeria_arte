@@ -8,6 +8,18 @@ body{
     background-color: #b81818;
     color: #ffffff;
 }
+h1.titulo {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 36px;
+}
+p.paragrafo {
+    text-align: justify;
+    margin: 20px auto;
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 1.6;
+}
 footer {
     background-color: #333333;
     color: #ffffff;

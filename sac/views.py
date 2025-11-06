@@ -1,5 +1,5 @@
 from django.forms import BaseModelForm
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.views.generic.edit import CreateView, UpdateView
@@ -44,6 +44,32 @@ def question_create(request):
         if form.is_valid():
             form.save()
             messages.success(request= 'Pergunta criada com sucesso')
+            return redirect("index")
+    
+    return render(request, 'sac/question_form.html', context)
+
+class QuestionUpdateView(LoginRequiredMixin, UpdateView):
+    model = Question
+    template_name = 'sac/question_form.html'
+    fields = ('question_text', 'pub_date')
+    success_url = reverse_lazy('index')
+    sucess_message ='Pergunta atualizada com sucesso.'
+    
+    def form_valid(self, form):
+        messages.success(self.request, self.sucess_message)
+        return super(QuestionUpdateView, self).form_valid(form)
+    
+@login_required
+def question_update(request, pk):
+    context = {}
+    question = get_object_or_404(Question, pk=pk)
+    form = QuestionForm(request.POST or None, request.FILES or None, instance=question)
+    context['form'] = form
+    
+    if request.method == "POST":
+        if form.is_valid():
+            form.save()
+            messages.success(request= 'Pergunta atualizada com sucesso')
             return redirect("index")
     
     return render(request, 'sac/question_form.html', context)
