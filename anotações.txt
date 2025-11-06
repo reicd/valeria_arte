@@ -1,4 +1,4 @@
-Roteiro- Inícial
+ ==== 1 - Roteiro- Inícial
 1.Criar o projeto e app Django
 2.Habilita o app /módulo polls
 3. Criar uma view para app SAC
@@ -6,7 +6,7 @@ Roteiro- Inícial
 5. Inicializar um servidor de desenvolvimento para testes
 6. Criar um template em HTML
 
-Roteiro - Introdução a template
+=== 2- Roteiro - Introdução a template
 1. Estrutura de templates para reutilização _base.HTML;
 2. Template de layout genérico _layout1.html;
 3. Aplicar o layout genérico em um template final;
@@ -17,50 +17,52 @@ Roteiro - Introdução a template
     {% %}=> comandos de controle (if, for, etc)
     {# #}=> comentários
  
- Roteiro - Introdução aos models  
+=== 3 -  Roteiro - Introdução aos models  
 1. Introdução ao ORM e models;
 2. Migração de dados;
 3. Reversão de model
 4. Criação de model;
 5. Criar uma pergunta de exemplo;
 6. Exibir dados em um template.
-
-    Roteiro - Registro de produto, somente usuário logado e com privilégio
+=== 4 - Roteiro - Registro de produto, somente usuário logado e com privilégio
 1. Definir o redirecionamento padrão, após login e logof; 
  2. Criar um novo django app para gestão de produtos;
 3. Criar e personalizar um form Django para registro de produto;
 4. Criar uma view e o template para registro de produtos;
  Criar rotas específicas para para gestão de produtos cadastrados;
 5. Controle de acesso pela sessão 
-
-
-    Roteiro - Registro e login de usuários
+=== 5 - Roteiro - Registro e login de usuários
 1. Definir o redirecionamento padrão, após login e logof; 
 2. Criar um novo django app para gestão de contas e usuários;
 3. Criar e personalizar um form Django para registro de usuário;
 4. Criar uma view e o template para registro de usuário;
 5. Criar rotas específicas para para gestão de contas;
 6. Controle de acesso pela sessão logado. 
-
-    Roteiro: Flash mensagens
+=== 6 - Roteiro: Flash mensagens
 1. Configurar as classes CSS para nessagens;
 2. Incluir o suporte padrão de mensagens na view; 
 3. Incluir a exibição das mensagens em nosso template;
 4. Testa.
 
-    Roteiro: Área administrativa
+=== 7 - Roteiro: Área administrativa
 1. Criar um usuário administrativo;
 2. Acessar a área administrativa;
 3. Explorar a área administrativa;
 4. Incluir o Model Question na área administrativa;
 5. Model CustomUser na área administrativa.
-
-    Roteiro: CRUD Básico = Create
+=== 8 - Roteiro: CRUD Básico = Create
 1. Criar a classe QuestinForm;
 2. Implementar as views;
 3. Criar o templates para exibir o formulário; 
 4. Definir as rotas para a views;
 5. Controle de acesso às rotas.
+=== 9 - Roteiro: CRUD Básico =UPDATE
+1. Implantando a views: uma baseada em classe e outra em função;
+2. Definir as rotas para a views;
+3. Adicionar um link/botão para "Editar pergunta";
+4. Personalizar o título do formulário de Criação/Edição.
+
+=== 10 - 
 ====CRUD = Create, Read, Update e Delete===
 
 

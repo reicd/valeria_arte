@@ -6,14 +6,13 @@
 {% endblock head_title %}
 
 {% block content %}
-  <h1>Esta é a página de perguntas frequentes (SAC) da Valéria.Arte.</h1> <hr>
+  <h2>Esta é a página de perguntas frequentes (SAC) da Valéria.Arte.</h2> <hr>
   
     {% for question in all_questions %}
     
     
         <div class="faq-item">
-                <p>{{ question.question_text }} | 
-                Publicado em: {{ question.pub_date|date:"d/m/y H:i" }}</p>
+                <p>Publicado em: {{ question.pub_date | date:"d/m/y H:i" }} | {{ question.question_text }} </p>
         </div>
         {% empty %}
             <p>Nenhuma pergunta disponível no momento.</p>

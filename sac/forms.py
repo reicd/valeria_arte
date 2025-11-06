@@ -7,6 +7,6 @@ class QuestionForm(forms.ModelForm):
         model = Question
         fields = ('question_text', 'pub_date')
         labels = {
-            'question_text': 'Texto da Pergunta',
+            'question_text': 'Pergunta',
             'pub_date': 'Data de Publicação',
         }
