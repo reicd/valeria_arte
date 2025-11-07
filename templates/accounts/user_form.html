@@ -9,7 +9,7 @@
                     {% csrf_token %}
                     {{ form.as_p }}
                     <p>
-                        {% if user.imagem %}
+                        {% if user.imagem.url is not None %}
                             <h5>Imagem de Perfil</h5>
                             <img src="{{ user.imagem.url }}" alt="Imagem de Perfil" width="150" height="150"/>
                         {% else %}

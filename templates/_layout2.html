@@ -15,32 +15,29 @@
 
     <ul class="nav nav-pills">
             {% if user.is_authenticated %}
-        <li class="nav-item"><span class="nav-link disabled">Olá, {{ user.username }}</span></li>
-        <li class="nav-item">
-            <form action="{% url 'account_edit' pk=user.id %}" method="post" class="d-flex">
-                    {% csrf_token %}
-                <button class="btn btn-link nav-link" type="submit">Editar Perfil</button>
-            </form>
-        </li>
-        <li class="nav-item">
-            <form action="{% url 'logout' %}" method="post" class="d-flex">
-                    {% csrf_token %}
-                <button class="btn btn-link nav-link" type="submit">Sair</button>
-            </form>
-        </li>
+                <li class="nav-item"><span class="nav-link disabled">Olá, {{ user.username }}</span></li>
+                <li class="nav-item">
+                    <a href="{% url 'account_edit' pk=user.id %}" class="nav-link">Perfil</a>
+                </li>
+                <li class="nav-item">
+                    <form action="{% url 'logout' %}" method="post" class="d-flex">
+                        {% csrf_token %}
+                        <button class="btn btn-link nav-link" type="submit">Sair</button>
+                    </form>
+                </li>
             {% else %}
-        <li class="nav-item">
-            <a href="{% url 'login' %}" class="nav-link active" aria-current="page">Entrar</a>
-        </li>
-        <li class="nav-item">
-            <a href="{% url 'signup' %}" class="nav-link">Registrar</a>
-        </li>        
+                <li class="nav-item">
+                    <a href="{% url 'login' %}" class="nav-link active" aria-current="page">Entrar</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'signup' %}" class="nav-link">Registrar</a>
+                </li>        
             {% endif %}
         <li class="nav-item">
-            <a href="{% url 'about' %}" class="nav-link">SAC</a>
+            <a href="{% url 'sac_add' %}" class="nav-link">SAC</a>
         </li>    
         <li class="nav-item">
-            <a href="{% url 'index' %}" class="nav-link">Sobre</a>
+            <a href="{% url 'about' %}" class="nav-link">Sobre</a>
         </li>
     </ul>                  
 
@@ -60,7 +57,7 @@
 {% block footer %}
 <div class="container">
     <footer>
-        <p>&copy; 2023 Valéria.Arte. Todos os direitos reservados.</p>
+        <p>&copy; {% now "Y" %} Valéria.Arte. Todos os direitos reservados.</p>
     </footer>
 </div>
 {% endblock footer %}
