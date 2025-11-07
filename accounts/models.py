@@ -14,3 +14,9 @@ class CustomUser(AbstractUser):
     pais = models.CharField("País",max_length=100, null=True, blank=True)
     cep = models.CharField("CEP",max_length=8, null=True, blank=True)
     cpf = models.CharField("CPF",max_length=11, null=True, blank=True)
+    imagem = models.FileField( 
+        "Imagem de Perfil", upload_to='imagens/user',
+        default=None,
+        null=True, 
+        blank=True
+        )   

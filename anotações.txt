@@ -62,11 +62,19 @@
 3. Adicionar um link/botão para "Editar pergunta";
 4. Personalizar o título do formulário de Criação/Edição.
 
-=== 10 - Crude Básico = desenvolvimento
+=== 10 - Crude Básico = Delete
 1. Implementação as views para exclusão de perguntas;
 2. Criar um template para a confirmação de exclusão; 
 3. Definir as rotas para views;
 4. Adicionar um link/botão para "Excluir Pergunta".
+
+=== 11 - Roteiro: CRUD Básico = UPDATE
+1. Configurar o projeto para suportar arquivos de midia;
+2. Acrecentar o FileFieId ao model CustomUser;
+3. Criar uma view e template para Editar o perfil do usuário;
+4. Criar uma rota para view AccountUpdateView.
+
+
 ====CRUD = Create, Read, Update e Delete===
 
 
