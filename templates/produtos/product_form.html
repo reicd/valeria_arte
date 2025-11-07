@@ -5,7 +5,7 @@
             <h5 class="card-title">Registro de Produto</h5>
         </div>
         <div class="card-body">
-                <form method="post" enctype="multipart/form-data">{#-- Adicionado enctype para upload de arquivos --}
+                <form method="post" enctype="multipart/form-data">{# Adicionado enctype para upload de arquivos #}
                     {% csrf_token %}
                     {{ form.as_p }}
                     <p>

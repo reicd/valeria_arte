@@ -1,0 +1,20 @@
+{% extends '_layout2.html' %}
+ {% block content %}
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title">Pergunta Detalhada</h5>
+        </div>
+        <div class="card-body">
+                <p>
+                    {{ question.question_text }}
+                    <a href="{% url 'sac_edit' pk=question.id %}"  class="btn btn-warning">Editar</a>
+                    <a href="{% url 'sac_delete' pk=question.id %}" class="btn btn-danger" onclick="return confirm('Tem certeza que deseja excluir esta pergunta?');">Excluir</a>
+                </p>
+                <p>
+                    <strong>Data de Criação:</strong> {{ question.created_at }}<br>
+                    <strong>Status:</strong> {{ question.get_status_display }}
+                </p>
+        </div>
+    </div>     
+    
+ {% endblock %}

@@ -74,6 +74,13 @@
 3. Criar uma view e template para Editar o perfil do usuário;
 4. Criar uma rota para view AccountUpdateView.
 
+=== 12 - Roteiro: CRUD Básico = Read
+1. Implantar a view genérica para exibir uma pergunta;
+2. Criar a rota para view QuestionDetailView;
+3. Implementar a view genérica para listar todas perguntas;
+4. Implementar uma view genérica sem Model.
+
+
 
 ====CRUD = Create, Read, Update e Delete===
 
