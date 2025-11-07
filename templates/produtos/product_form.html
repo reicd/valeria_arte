@@ -5,9 +5,17 @@
             <h5 class="card-title">Registro de Produto</h5>
         </div>
         <div class="card-body">
-                <form method="post">
+                <form method="post" enctype="multipart/form-data">{#-- Adicionado enctype para upload de arquivos --}
                     {% csrf_token %}
                     {{ form.as_p }}
+                    <p>
+                        {% if form.instance.imagem %}
+                            <h5>Imagem atual:</h5>
+                            <img src="{{ form.instance.imagem.url }}" alt="Imagem do Produto" style="max-width: 200px; max-height: 200px;">
+                        {% else %}
+                            <em>Nenhuma imagem carregada.</em>
+                        {% endif %}
+                    </p>
                     <button type="submit" class="btn btn-success">Cadastrar</button>
                 </form>
         </div>

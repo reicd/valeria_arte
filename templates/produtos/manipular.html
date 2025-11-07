@@ -19,8 +19,8 @@
                 <table>
                     <tr>
                         <td rowspan="3" style="width: 150px; text-align: center;">
-                            {% if product.image %}
-                                <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid" style="max-height: 150px;">
+                            {% if product.imagem %}
+                                <img src="{{ product.imagem.url }}" alt="{{ product.name }}" class="img-fluid" style="max-height: 150px;">
                             {% else %}
                                 <img src="{% static 'images/no_image_available.png' %}" alt="No Image" class="img-fluid" style="max-height: 150px;">
                             {% endif %}

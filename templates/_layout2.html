@@ -15,7 +15,7 @@
 
     <ul class="nav nav-pills">
             {% if user.is_authenticated %}
-                <li class="nav-item"><span class="nav-link disabled">Olá, {{ user.username }}</span></li>
+                <li class="nav-item">Olá, {{ user.username }}</li>
                 <li class="nav-item">
                     <a href="{% url 'account_edit' pk=user.id %}" class="nav-link">Perfil</a>
                 </li>

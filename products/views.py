@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.contrib import messages
-
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Product
 from products.forms import ProductForm
 
@@ -69,3 +69,4 @@ class ProductDeleteView(DeleteView):
     def post(self, request, *args, **kwargs):
         messages.success(self.request, 'Produto excluído com sucesso.')
         return super().post(request, *args, **kwargs)
+
